@@ -35,3 +35,8 @@ void Dog::makeSound() const
 {
 	std::cout << "Dog: Making the sound of a Dog. WOOF-WOOF!" << '\n';
 }
+
+// const Brain* Cat::getBrain() const
+// {
+//     return this->brain;
+// }
