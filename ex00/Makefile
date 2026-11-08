@@ -9,6 +9,9 @@ HEADERS :=  Animal.hpp \
 
 OBJS_FOLDER := objs/
 SRCS := main.cpp \
+		Animal.cpp \
+		Dog.cpp \
+		Cat.cpp
 
 
 # OBJS := $(SRCS:.cpp=.o)
@@ -17,6 +20,7 @@ OBJS := $(patsubst %.cpp, $(OBJS_FOLDER)%.o,$(SRCS))
 .PHONY: all clean fclean re
 
 all: $(NAME)
+	./$(NAME)
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $@
