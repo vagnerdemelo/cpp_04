@@ -1,7 +1,7 @@
 #ifndef DOG_HPP
 #define DOG_HPP
 
-#include <string.h>
+#include <string>
 #include <iostream>
 #include "Animal.hpp"
 

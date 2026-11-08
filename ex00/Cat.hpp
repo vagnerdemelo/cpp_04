@@ -1,7 +1,7 @@
 #ifndef CAT_HPP
 #define CAT_HPP
 
-#include <string.h>
+#include <string>
 #include <iostream>
 #include "Animal.hpp"
 
