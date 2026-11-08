@@ -29,3 +29,8 @@ void Animal::makeSound() const
 {
 	std::cout << "Animal: Making the sound of an animal." << '\n';
 }
+
+std::string Animal::getType() const
+{
+	return this->type;
+}

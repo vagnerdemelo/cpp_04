@@ -15,6 +15,7 @@ public:
 	virtual ~Animal();
 
 	virtual void makeSound() const;
+	std::string getType() const;
 };
 
 #endif
