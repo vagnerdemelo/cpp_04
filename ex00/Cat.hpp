@@ -12,6 +12,8 @@ public:
 	Cat(const Cat &other);
 	Cat &operator=(const Cat &other);
 	~Cat();
+
+	void Cat::makeSound() const;
 };
 
 #endif
