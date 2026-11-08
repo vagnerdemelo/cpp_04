@@ -24,6 +24,7 @@ Dog &Dog::operator=(const Dog &other)
 Dog::~Dog()
 {
 	std::cout << "Dog: Destructor called." << '\n';
+	delete this->brain;
 }
 
 void Dog::makeSound() const
