@@ -25,10 +25,10 @@ Animal::~Animal()
 	std::cout << "Animal: Destructor called." << '\n';
 }
 
-void Animal::makeSound() const
-{
-	std::cout << "Animal: Making the sound of an animal." << '\n';
-}
+// void Animal::makeSound() const
+// {
+// 	std::cout << "Animal: Making the sound of an animal." << '\n';
+// }
 
 std::string Animal::getType() const
 {

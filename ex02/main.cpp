@@ -9,6 +9,8 @@ int main()
 {
     std::cout << "\n=== TEST 1: ANIMAL ARRAY ===\n";
 
+	// Animal teste;
+
     const int size = 10;
     Animal *animals[size];
 
