@@ -26,8 +26,7 @@ OBJS := $(patsubst %.cpp, $(OBJS_FOLDER)%.o,$(SRCS))
 .PHONY: all clean fclean re
 
 all: $(NAME)
-	@echo "Compilado com sucesso, rodando ./$(NAME)...\n\nOutput>"
-	@./$(NAME)
+	@echo "Compilado com sucesso, Rode ./$(NAME)."
 
 $(NAME): $(OBJS)
 	@$(CXX) $(CXXFLAGS) $(OBJS) -o $@
@@ -47,3 +46,6 @@ fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
+
+leak-check:
+	valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)
