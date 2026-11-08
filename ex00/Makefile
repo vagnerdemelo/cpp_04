@@ -3,11 +3,13 @@ NAME := DiamondTrap
 CXX := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 
-HEADERS :=
+HEADERS :=  Animal.hpp \
+			Cat.hpp \
+			Dog.hpp
 
 OBJS_FOLDER := objs/
 SRCS := main.cpp \
-		
+
 
 # OBJS := $(SRCS:.cpp=.o)
 OBJS := $(patsubst %.cpp, $(OBJS_FOLDER)%.o,$(SRCS))
