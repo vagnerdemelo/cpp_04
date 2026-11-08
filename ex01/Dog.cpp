@@ -4,6 +4,7 @@ Dog::Dog()
 {
 	std::cout << "Dog: Default Constructor called." << '\n';
 	this->type = "Dog";
+	this->brain = new Brain();
 }
 
 Dog::Dog(const Dog &other) : Animal(other)
