@@ -16,7 +16,7 @@ Cat &Cat::operator=(const Cat &other)
 	std::cout << "Cat: Copy Assignment Constructor called." << '\n';
 
 	if (this != &other)
-		this->type = other.type;
+		Animal::operator=(other);
 	return *this;
 }
 
@@ -27,5 +27,5 @@ Cat::~Cat()
 
 void Cat::makeSound() const
 {
-	std::cout << "Cat: Making the sound of a Dog. MEOW!" << '\n';
+	std::cout << "Cat: Making the sound of a Cat. MEOW!" << '\n';
 }
