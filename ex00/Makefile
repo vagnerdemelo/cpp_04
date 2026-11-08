@@ -21,26 +21,29 @@ SRCS := main.cpp \
 # OBJS := $(SRCS:.cpp=.o)
 OBJS := $(patsubst %.cpp, $(OBJS_FOLDER)%.o,$(SRCS))
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re leak-check
 
 all: $(NAME)
-	./$(NAME)
+	@echo "Compilado com sucesso. Rode ./$(NAME)."
 
 $(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $@
+	@$(CXX) $(CXXFLAGS) $(OBJS) -o $@
 
 $(OBJS_FOLDER):
-	mkdir -p $(OBJS_FOLDER)
+	@mkdir -p $(OBJS_FOLDER)
 
 $(OBJS_FOLDER)%.o: %.cpp | $(OBJS_FOLDER)
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(OBJS): $(HEADERS)
 
 clean:
-	rm -f $(OBJS)
+	@rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
+
+leak-check:
+	valgrind --leak-check=full --show-leak-kinds=all ./$(NAME)

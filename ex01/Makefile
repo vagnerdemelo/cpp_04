@@ -23,10 +23,10 @@ SRCS := main.cpp \
 # OBJS := $(SRCS:.cpp=.o)
 OBJS := $(patsubst %.cpp, $(OBJS_FOLDER)%.o,$(SRCS))
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re leak-check
 
 all: $(NAME)
-	@echo "Compilado com sucesso, Rode ./$(NAME)."
+	@echo "Compilado com sucesso. Rode ./$(NAME)."
 
 $(NAME): $(OBJS)
 	@$(CXX) $(CXXFLAGS) $(OBJS) -o $@
