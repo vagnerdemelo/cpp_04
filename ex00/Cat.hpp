@@ -13,7 +13,7 @@ public:
 	Cat &operator=(const Cat &other);
 	~Cat();
 
-	void Cat::makeSound() const;
+	void makeSound() const;
 };
 
 #endif
