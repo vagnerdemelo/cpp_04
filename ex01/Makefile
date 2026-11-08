@@ -7,7 +7,8 @@ HEADERS :=  Animal.hpp \
 			Cat.hpp \
 			Dog.hpp \
 			WrongAnimal.hpp \
-			WrongCat.hpp
+			WrongCat.hpp \
+			Brain.hpp
 
 OBJS_FOLDER := objs/
 SRCS := main.cpp \
@@ -15,7 +16,8 @@ SRCS := main.cpp \
 		Dog.cpp \
 		Cat.cpp \
 		WrongAnimal.cpp \
-		WrongCat.cpp
+		WrongCat.cpp \
+		Brain.cpp
 
 
 # OBJS := $(SRCS:.cpp=.o)
